@@ -1,0 +1,92 @@
+.conteiner {
+  position: absolute;
+  overflow-X: hidden;
+  right: 0;
+  bottom: 0;
+  width: 95vw;
+  height:100vh;
+  @include flex (center, flex-start,row,0);
+
+
+  .profile{
+    position: relative;
+    width: 30%;
+
+    @include flex (center, center, row,0);
+    animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+    img{
+      clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+      position: absolute;
+      left: 0;
+      top:0;
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      
+
+    }
+
+  }
+
+  .conteudo {
+    width: 70%;
+    height:100%;
+    @include flex (center,center,column, 1rem);
+
+    
+    h1 {
+      text-align: center;
+      font-size: 35px;
+      display: block;
+      width: 50%;
+      @include flex (center, center, row, 0);
+
+      
+    }
+    #pointer{
+      display: block;
+      height: 2.3rem;
+      background-color: $fontColor;
+      width: .5rem;
+      animation: terminal 2s infinite;
+      margin-left:.5rem
+    }
+    h3{
+      text-align: center;
+      font-size:20px;
+      margin-bottom:3rem;
+      @include flex (center, center, row, 0);
+    }
+    p{
+      font-size: 14px;
+      font-weight: bold;
+      text-align: justify;}
+  }
+
+  hr{ 
+    margin-top:3rem;
+    width: 80%;
+    height: 3px;
+    background-color:$fontColor}
+
+  .techs{
+    margin-top: 1rem;
+    width: 100%;
+    height:8vw;
+    @include flex (center,center,row, 2rem);
+
+    img{
+      height: 30%;
+      margin:auto 0;
+      display: block;
+      filter:grayscale(100%);
+      transition: filter 2.5s, height 1.2s;
+
+      &:hover{
+        height: 100%;
+        filter: grayscale(0)
+      }
+    }
+  }
+}

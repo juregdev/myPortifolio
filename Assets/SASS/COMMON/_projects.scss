@@ -1,0 +1,45 @@
+
+.projects{
+    width: 90%;
+    height: 100%;
+    padding: 60px 0 60px 0px;
+    @include flex(center,flex-start, column, 0);
+    row-gap: 0;
+    flex-wrap:wrap;
+
+
+    div{
+      @include flex(center,center,row,0);
+      width: 100%;
+
+    .cardProject{
+      position: relative;
+      width:30vw;
+      cursor: pointer;
+      @include flex(center,center,row, 0);
+      overflow: hidden;
+   
+      transition: transform 1s;
+
+      &:hover{
+
+        img{
+          filter:none;
+          background:rgba(0, 0, 0, 0.428);
+        }
+      }
+
+   
+    
+
+      img{
+        width: 100%;
+        
+        object-fit: cover;
+        display: block;
+        filter: grayscale(100%); 
+        transition: filter 1s;
+      }
+    }
+  } 
+}
