@@ -5,7 +5,7 @@ const url = window.location.pathname
 contactListener()
 outListener()
 
-if (url === '/' || url.includes('index')) {
+if (document.querySelector('body').children[0].id == 'home') {
   initHome()
   inPage('NavHome')
 }
