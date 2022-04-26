@@ -1,26 +1,35 @@
-
-
-
-
-.social-menu{
-  position:fixed;
+.social-menu {
+  position: fixed;
   overflow: visible;
-  background:$background;
+  background: $background;
   z-index: 100;
   height: 100vh;
   width: 5%;
-  @include flex (center, center, column,0);
+  @include flex (center, center, column, 0);
   animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  #topPage{
-    height:100%;
-    nav{
+  transition: left 1s;
+
+  @include media ($md) {
+    width: 10vw;
+  }
+
+  @include media ($mobileXl) {
+    width: 25vw;
+    left: -100%;
+  }
+
+
+  #topPage {
+    height: 100%;
+
+    nav {
       width: 100%;
       position: relative;
       z-index: 1;
-      height:50%;
-      top:2rem;
-      
-      ul{
+      height: 50%;
+      top: 2rem;
+
+      ul {
         height: 100%;
         @include flex (flex-start, center, column, 2rem);
 
@@ -30,43 +39,55 @@
           &:after {
             content: " ";
             position: absolute;
-            right:  0;
+            right: 0;
             bottom: -200%;
             height: 100%;
-           
+
             transition: bottom 0.8s;
             border: 1px solid $menuHover;
 
-            
-            
-          
+
+
+
           }
+
           &:hover {
-            &:after{
-              
-              bottom:0;
+            &:after {
+
+              bottom: 0;
             }
           }
         }
-  
-        li{
+
+        li {
           list-style: none;
           width: 100%;
           position: relative;
-          height:5vh;
-          @include flex (center, center, row,0);
+          height: 5vh;
+          @include flex (center, center, row, 0);
 
-          
+          @include media ($mobileXl) {
+            height: 8vh;
+          }
 
-          
-          a{
-            img{
+
+          a {
+            img {
               display: block;
               width: 2vw;
-              margin:auto;
+              margin: auto;
               transition: transform .8s;
+
+              @include media ($md) {
+                width: 4vw;
+
+              }
+
+              @include media ($mobileXl) {
+                width: 7vw;
+              }
             }
-  
+
             &:hover img {
               transform: scale(1.2)
             }
@@ -74,79 +95,143 @@
         }
       }
     }
-   }
-   #bottomPage{
-    position: relative;
-    height: 50%; 
+  }
 
-  #logo{
-    @include flex (flex-end, center, column,0);
-    width: 100%;
-    height: 25%;
-   
-    img{ 
-      display:block;
+  #bottomPage {
+    position: relative;
+    height: 50%;
+
+    #logo {
+      @include flex (flex-end, center, column, 0);
       width: 100%;
+      height: 25%;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
     }
+
+
+    @include flex (flex-end, center, column, 0);
+
+    .send {
+
+      margin-bottom: 1rem;
+      @include flex (flex-end, center, row, 0);
+      cursor: pointer;
+      height: 10%;
+      width: 100%;
+
+
+      #send {
+        display: block;
+        margin: auto;
+        width: 40%;
+        transition: transform 1.2s;
+
+        @include media ($md) {
+          width: 5vw;
+
+        }
+
+        @include media ($mobileXl) {
+          width: 8vw;
+        }
+      }
+
+      &:hover {
+        animation: sendContact 2s;
+      }
+    }
+  }
+
+
+}
+
+.socialMedia {
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  left: 5vw;
+  width: 0;
+  overflow: hidden;
+  padding: 1rem 0 1rem 0;
+  background: $background;
+  @include flex (flex-start, center, row, 1rem);
+
+  transition: all 1s;
+
+
+
+  @include media ($md) {
+    left: 9.5vw;
+    gap: .5rem;
+
+  }
+
+  @include media ($mobileXl) {
+    left: 25vw;
+    gap: .8rem
+  }
+
+  @include media ($sm) {
+    left: 24.5vw;
+    gap: .5rem;
 
   }
 
 
-    @include flex (flex-end, center, column,0);
+  a {
+    img {
+      width: 2.5vw;
+      transition: transform .8s;
 
-  .send{
+      @include media ($md) {
+        width: 6vw
+      }
 
-    margin-bottom: 1rem;
-    @include flex (flex-end,center, row, 0);
-    cursor: pointer;
-    height:10%;
-    width:100%;
-    
+      @include media ($mobileXl) {
+        width: 8vw
+      }
 
-    #send{
-      display: block;
-      margin:auto;
-      width:40%;
-      transition: transform 1.2s;
+      @include media ($sm) {
+        width: 10vw;
+      }
+
     }
 
-   &:hover{
-     animation: sendContact 2s ;
-   }
+    &:hover img {
+      transform: scale(1.1)
+    }
   }
 }
 
-  
-    }
+.inPage {
+  border-right: 6px solid $menuHover;
+  border-radius: 4px;
+  box-shadow: 10px 5px 20px -6px #666666;
+}
 
-    .socialMedia{
-      z-index: 100;
-      position:fixed;
-      bottom: 0;
-      left: 5vw;
-      width: 0;
-      overflow: hidden;
-      padding:1rem 0 1rem 0;
-      background: $background;
-      @include flex (flex-start,center,row,1rem);
-     
-      transition: all 1s;
-      
+#pushMenu {
+  position: absolute;
+  z-index: 300;
+  width: 10vw;
+  top: 2rem;
+  left: 0;
+  transition: left 1s, transform 1s;
+  animation: initMobile 1.5s 2s;
+  display: none;
 
-      a{
-        img{
-          width:2.5vw;
-          transition: transform .8s;
-        }
+  @include media ($mobileXl) {
+    display: block;
+  }
 
-        &:hover img{
-        transform:scale(1.1)
-        }
-      }
-    }
 
-    .inPage {
-      border-right: 6px solid $menuHover;
-      border-radius: 4px ;
-      box-shadow: 10px 5px 20px -6px #666666;
-    }
+
+  img {
+    width: 100%;
+  }
+
+}

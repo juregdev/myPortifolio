@@ -1,0 +1,10 @@
+$xl: 1500px;
+$md: 1000px;
+$mobileXl: 600px;
+$sm: 280px;
+
+@mixin media ($tamanho) {
+  @media (max-width: $tamanho) {
+    @content
+  }
+}

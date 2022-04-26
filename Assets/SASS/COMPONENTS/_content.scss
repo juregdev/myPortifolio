@@ -4,25 +4,46 @@
   right: 0;
   bottom: 0;
   width: 95vw;
-  height:100vh;
-  @include flex (center, flex-start,row,0);
+  height: 100vh;
+  @include flex (center, flex-start, row, 0);
+
+  @include media ($mobileXl) {
+    flex-direction: column;
+  }
 
 
-  .profile{
+  .profile {
     position: relative;
     width: 30%;
-    @include flex (center, center, row,0);
+    @include flex (center, center, row, 0);
     animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
-    img{
+    @include media ($md) {
+      width: 40%;
+
+    }
+
+    @include media ($mobileXl) {
+      width: 100%;
+      margin-top: 10%;
+    }
+
+    img {
       clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
       position: absolute;
       left: 0;
-      top:0;
+      top: 0;
       width: 100%;
       height: 100vh;
       object-fit: cover;
-      
+
+      @include media ($mobileXl) {
+        position: relative;
+        clip-path: none;
+        height: auto;
+        width: 40vw;
+        border-radius: 100%;
+      }
 
     }
 
@@ -30,10 +51,17 @@
 
   .conteudo {
     width: 70%;
-    height:100%;
-    @include flex (center,center,column, 1rem);
+    height: 100%;
+    @include flex (center, center, column, 1rem);
 
-    
+    @include media ($md) {
+      width: 50%;
+    }
+
+    @include media ($mobileXl) {
+      width: 100%;
+    }
+
     h1 {
       text-align: center;
       font-size: 35px;
@@ -41,50 +69,99 @@
       width: 50%;
       @include flex (center, center, row, 0);
 
-      
+      @include media ($mobileXl) {
+        font-size: 20px;
+      }
+
+
     }
-    #pointer{
+
+    #pointer {
       display: block;
       height: 2.3rem;
       background-color: $fontColor;
       width: .5rem;
       animation: terminal 2s infinite;
-      margin-left:.5rem
+      margin-left: .5rem;
+
+      @include media ($mobileXl) {
+        height: 1.5rem;
+        width: .2rem;
+      }
     }
-    h3{
+
+    h3 {
       text-align: center;
-      font-size:20px;
-      margin-bottom:3rem;
+      font-size: 20px;
+      margin-bottom: 3rem;
       @include flex (center, center, row, 0);
+
+      @include media ($mobileXl) {
+        font-size: 16px;
+        margin-bottom: 1rem;
+      }
     }
-    p{
+
+    p {
       font-size: 14px;
       font-weight: bold;
-      text-align: justify;}
+      text-align: justify;
+      padding: 0 16px;
+
+      @include media ($xl) {
+        font-size: 12px;
+        text-align: center
+      }
+
+      @include media ($mobileXl) {
+        padding: 0 32px;
+      }
+    }
   }
 
-  hr{ 
-    margin-top:3rem;
+  hr {
+    margin-top: 20px;
     width: 80%;
     height: 3px;
-    background-color:$fontColor}
+    background-color: $fontColor
+  }
 
-  .techs{
+  .techs {
     margin-top: 1rem;
     width: 100%;
-    height:8vw;
-    @include flex (center,center,row, 2rem);
+    height: 8vw;
+    @include flex (center, center, row, 2rem);
 
-    img{
+    @include media ($mobileXl) {
+      gap: .5rem;
+    }
+
+    img {
       height: 30%;
-      margin:auto 0;
+      margin: auto 0;
       display: block;
-      filter:grayscale(100%);
+      filter: grayscale(100%);
       transition: filter 2.5s, height 1.2s;
 
-      &:hover{
+      @include media($md) {
+        height: 50%;
+      }
+
+      @include media ($mobileXl) {
+        height: 80%;
+      }
+
+      @include media ($mobileXl) {
         height: 100%;
-        filter: grayscale(0)
+      }
+
+      &:hover {
+        height: 100%;
+        filter: grayscale(0);
+
+        @include media ($mobileXl) {
+          height: 150%;
+        }
       }
     }
   }
