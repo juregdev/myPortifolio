@@ -214,6 +214,12 @@ body {
       flex-wrap: wrap;
 }
 
+@media (max-width: 600px) {
+  .projects {
+    width: 100%;
+  }
+}
+
 .projects div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -303,12 +309,28 @@ body {
           animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
+@media (max-width: 600px) {
+  .infoProject {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .infoProject #close {
   width: 3vw;
   position: absolute;
   right: 0;
   top: 2rem;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .infoProject #close {
+    width: 10vw;
+    right: 1rem;
+  }
 }
 
 .infoProject #leftInfo {
@@ -331,14 +353,35 @@ body {
   width: 33%;
 }
 
+@media (max-width: 600px) {
+  .infoProject #leftInfo {
+    border: none;
+    width: 95%;
+    height: auto;
+    margin-top: 20%;
+  }
+}
+
 .infoProject #leftInfo h1 {
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .infoProject #leftInfo h1 {
+    font-size: 24px;
+  }
 }
 
 .infoProject #leftInfo #description {
   display: block;
   width: 70%;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .infoProject #leftInfo #description {
+    font-size: 16px;
+  }
 }
 
 .infoProject #leftInfo .techsInfo {
@@ -360,8 +403,20 @@ body {
   gap: 1rem;
 }
 
+@media (max-width: 600px) {
+  .infoProject #leftInfo .techsInfo {
+    margin-top: 1rem;
+  }
+}
+
 .infoProject #leftInfo .techsInfo img {
   width: 2.5vw;
+}
+
+@media (max-width: 600px) {
+  .infoProject #leftInfo .techsInfo img {
+    width: 12vw;
+  }
 }
 
 .infoProject #c-carrousel {
@@ -389,6 +444,16 @@ body {
   height: 50%;
 }
 
+@media (max-width: 600px) {
+  .infoProject #c-carrousel #screenDesktop {
+    height: auto;
+    margin: auto;
+    display: block;
+    width: 95%;
+    top: 0;
+  }
+}
+
 .infoProject #c-carrousel div {
   margin-top: 1rem;
   display: -webkit-box;
@@ -408,8 +473,24 @@ body {
   width: 80%;
 }
 
+@media (max-width: 600px) {
+  .infoProject #c-carrousel div {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 .infoProject #c-carrousel div .screenMobile {
   height: 70%;
+}
+
+@media (max-width: 600px) {
+  .infoProject #c-carrousel div .screenMobile {
+    height: auto;
+    width: 30%;
+    top: 0;
+  }
 }
 
 .infoProject #linkRepo {
@@ -418,8 +499,20 @@ body {
   top: 10%;
 }
 
+@media (max-width: 600px) {
+  .infoProject #linkRepo {
+    right: 1rem;
+  }
+}
+
 .infoProject #linkRepo img {
   width: 3vw;
+}
+
+@media (max-width: 600px) {
+  .infoProject #linkRepo img {
+    width: 10vw;
+  }
 }
 
 .projectOut {
@@ -802,6 +895,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 100%;
   }
 }
 

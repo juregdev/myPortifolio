@@ -6,6 +6,12 @@
   row-gap: 0;
   flex-wrap: wrap;
 
+  @include media ($mobileXl) {
+
+    width: 100%;
+
+  }
+
 
   div {
     @include flex(center, flex-start, row, 0);
@@ -54,12 +60,21 @@
   @include flex(none, center, row-reverse, 0);
   animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
+  @include media ($mobileXl) {
+    flex-direction: column;
+  }
+
   #close {
     width: 3vw;
     position: absolute;
     right: 0;
     top: 2rem;
     cursor: pointer;
+
+    @include media ($mobileXl) {
+      width: 10vw;
+      right: 1rem;
+    }
   }
 
   #leftInfo {
@@ -68,15 +83,30 @@
     height: 90%;
     width: 33%;
 
+    @include media ($mobileXl) {
+      border: none;
+      width: 95%;
+      height: auto;
+      margin-top: 20%;
+    }
+
 
     h1 {
       text-align: center;
+
+      @include media ($mobileXl) {
+        font-size: 24px
+      }
     }
 
     #description {
       display: block;
       width: 70%;
       text-align: center;
+
+      @include media ($mobileXl) {
+        font-size: 16px
+      }
     }
 
     .techsInfo {
@@ -84,8 +114,17 @@
       margin-top: 2.5rem;
       @include flex (center, center, row, 1rem);
 
+      @include media ($mobileXl) {
+        margin-top: 1rem;
+      }
+
+
       img {
         width: 2.5vw;
+
+        @include media ($mobileXl) {
+          width: 12vw;
+        }
       }
     }
   }
@@ -95,11 +134,18 @@
     width: 100%;
     height: 100%;
 
-
     #screenDesktop {
       position: relative;
       top: 2rem;
       height: 50%;
+
+      @include media ($mobileXl) {
+        height: auto;
+        margin: auto;
+        display: block;
+        width: 95%;
+        top: 0;
+      }
     }
 
     div {
@@ -108,8 +154,18 @@
       height: 50%;
       width: 80%;
 
+      @include media ($mobileXl) {
+        align-items: flex-start;
+      }
+
       .screenMobile {
         height: 70%;
+
+        @include media ($mobileXl) {
+          height: auto;
+          width: 30%;
+          top: 0;
+        }
       }
     }
   }
@@ -119,8 +175,17 @@
     right: 0;
     top: 10%;
 
+    @include media ($mobileXl) {
+
+      right: 1rem;
+    }
+
     img {
       width: 3vw;
+
+      @include media ($mobileXl) {
+        width: 10vw;
+      }
     }
 
 
