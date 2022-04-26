@@ -45,3 +45,78 @@
     }
   } 
 }
+
+.infoProject{
+  position: absolute;
+  z-index: 30;
+  background:$background;
+  width: 90%;
+  height: 100%;
+  @include flex(none,center, column, 1rem);
+  padding-top:60px;
+  animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+  #close{
+    width: 3vw;
+    position: absolute;
+    right: 0;
+    top: 2rem;
+  }
+ 
+
+  #description{
+    display: block;
+    width: 80%;
+    text-align:center;
+    
+  }
+
+  .techsInfo {
+    width: 100%;
+    @include flex (center, center,row, 1rem);
+
+    img{width: 2.5vw;}
+  }
+
+  #hrProjects{
+    height:1px;
+    width: 85%;
+    margin: 0;
+    background:$background;
+  }
+
+  #c-carrousel{
+    @include flex(center,center, column,0);
+    width: 100%;
+    height:70%;
+    
+
+    #screenDesktop{
+      margin-top:30rem;
+      height: 100%;}
+
+    div{
+      margin-top:1rem;
+        @include flex(space-around,center,row,0);
+        height: 70%;
+        width: 80%;
+
+      .screenMobile{
+        height: 100%;
+     }
+  }
+  }
+
+  #linkRepo{
+    position: absolute;
+    right: 0;
+    top: 10%; 
+    img{width: 3vw;}
+
+
+  }
+
+  
+}
+
+.projectOut { animation: slide-out-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;}

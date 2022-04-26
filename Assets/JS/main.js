@@ -1,5 +1,6 @@
 import { contactListener, outListener, inPage } from './menu.js'
 import { initHome } from './home.js'
+import { clickCard } from './project.js'
 const url = window.location.pathname
 
 contactListener()
@@ -12,4 +13,5 @@ if (document.querySelector('body').children[0].id == 'home') {
 
 if (url.includes('project')) {
   inPage('navProjects')
+  clickCard()
 }
