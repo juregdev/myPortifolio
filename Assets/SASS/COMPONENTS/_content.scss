@@ -25,7 +25,8 @@
 
     @include media ($mobileXl) {
       width: 100%;
-      margin-top: 10%;
+
+      align-items: flex-end
     }
 
     img {
@@ -40,6 +41,7 @@
       @include media ($mobileXl) {
         position: relative;
         clip-path: none;
+
         height: auto;
         width: 40vw;
         border-radius: 100%;
@@ -60,6 +62,8 @@
 
     @include media ($mobileXl) {
       width: 100%;
+      height: auto;
+      margin-top: 2rem;
     }
 
     h1 {
