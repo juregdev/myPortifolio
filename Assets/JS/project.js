@@ -23,7 +23,7 @@ const rocketCoffe = {
     Desktop: './Assets/IMG/Projects/RocketCoffee/Desktop.png',
     Mobile: [
       './Assets/IMG/Projects/RocketCoffee/Mobile.png',
-      './Assets/IMG/Projects/RocketCoffee/mobile_2.png'
+      './Assets/IMG/Projects/RocketCoffee/Mobile_2.png'
     ]
   }
 }
@@ -38,8 +38,8 @@ const renderizandoHistoria = {
     Desktop: './Assets/IMG/Projects/Renderizando-a-Historia/Desktop.png',
     Mobile: [
       './Assets/IMG/Projects/Renderizando-a-Historia/Mobile.png',
-      './Assets/IMG/Projects/Renderizando-a-Historia/mobile_2.png',
-      './Assets/IMG/Projects/Renderizando-a-Historia/mobile_3.png'
+      './Assets/IMG/Projects/Renderizando-a-Historia/Mobile_2.png',
+      './Assets/IMG/Projects/Renderizando-a-Historia/Mobile_3.png'
     ]
   }
 }
