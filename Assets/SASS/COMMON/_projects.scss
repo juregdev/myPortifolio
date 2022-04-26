@@ -1,122 +1,134 @@
+.projects {
+  width: 90%;
+  height: 100%;
 
-.projects{
-    width: 90%;
-    height: 100%;
-
-    @include flex(center,flex-start, column, 0);
-    row-gap: 0;
-    flex-wrap:wrap;
+  @include flex(center, flex-start, column, 0);
+  row-gap: 0;
+  flex-wrap: wrap;
 
 
-    div{
-      @include flex(center,flex-start, row, 0);
-      width: 100%;
-      overflow: hidden;
+  div {
+    @include flex(center, flex-start, row, 0);
+    width: 100%;
+    overflow: hidden;
 
-    .cardProject{
+    .cardProject {
       position: relative;
-      width:30vw;
-      height:30vh;
+      width: 30vw;
+      height: 30vh;
       cursor: pointer;
-      @include flex(center,center,row, 0);
+      @include flex(center, center, row, 0);
       overflow: hidden;
-   
+
       transition: transform 1s;
 
-      &:hover{
+      &:hover {
 
-        img{
-          filter:none;
-          background:rgba(0, 0, 0, 0.428);
+        img {
+          filter: none;
+          background: rgba(0, 0, 0, 0.428);
         }
       }
 
-   
-    
 
-      img{
+
+
+      img {
         width: 100%;
-        height:100%;
+        height: 100%;
         object-fit: cover;
         display: block;
-        filter: grayscale(100%); 
+        filter: grayscale(100%);
         transition: filter .6s ease-in-out;
       }
     }
-  } 
+  }
 }
 
-.infoProject{
+.infoProject {
   position: absolute;
   z-index: 30;
-  background:$background;
-  width: 90%;
-  height: 100%;
-  @include flex(none,center, column, 1rem);
-  padding-top:60px;
+  background: $background;
+  width: 100%;
+  height: 99vh;
+  @include flex(none, center, row-reverse, 0);
   animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
-  #close{
+  #close {
     width: 3vw;
     position: absolute;
     right: 0;
     top: 2rem;
-  }
- 
-
-  #description{
-    display: block;
-    width: 80%;
-    text-align:center;
-    
+    cursor: pointer;
   }
 
-  .techsInfo {
+  #leftInfo {
+    @include flex(center, center, column, 2rem);
+    border-left: 1px solid rgba(151, 151, 151, 0.587);
+    height: 90%;
+    width: 33%;
+
+
+    h1 {
+      text-align: center;
+    }
+
+    #description {
+      display: block;
+      width: 70%;
+      text-align: center;
+    }
+
+    .techsInfo {
+      width: 100%;
+      margin-top: 2.5rem;
+      @include flex (center, center, row, 1rem);
+
+      img {
+        width: 2.5vw;
+      }
+    }
+  }
+
+  #c-carrousel {
+    @include flex(center, center, column, 0);
     width: 100%;
-    @include flex (center, center,row, 1rem);
+    height: 100%;
 
-    img{width: 2.5vw;}
-  }
 
-  #hrProjects{
-    height:1px;
-    width: 85%;
-    margin: 0;
-    background:$background;
-  }
+    #screenDesktop {
+      position: relative;
+      top: 2rem;
+      height: 50%;
+    }
 
-  #c-carrousel{
-    @include flex(center,center, column,0);
-    width: 100%;
-    height:70%;
-    
+    div {
+      margin-top: 1rem;
+      @include flex(space-around, center, row, 0);
+      height: 50%;
+      width: 80%;
 
-    #screenDesktop{
-      margin-top:30rem;
-      height: 100%;}
-
-    div{
-      margin-top:1rem;
-        @include flex(space-around,center,row,0);
+      .screenMobile {
         height: 70%;
-        width: 80%;
-
-      .screenMobile{
-        height: 100%;
-     }
-  }
+      }
+    }
   }
 
-  #linkRepo{
+  #linkRepo {
     position: absolute;
     right: 0;
-    top: 10%; 
-    img{width: 3vw;}
+    top: 10%;
+
+    img {
+      width: 3vw;
+    }
 
 
   }
 
-  
+
 }
 
-.projectOut { animation: slide-out-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;}
+.projectOut {
+  animation: slide-out-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}

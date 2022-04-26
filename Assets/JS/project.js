@@ -30,7 +30,8 @@ const rocketCoffe = {
 
 const renderizandoHistoria = {
   name: 'Renderizando a História',
-  description: 'Desafio da cafeteria RocketCoffee proposta pela Rocketseat 🚀',
+  description:
+    'O Renderizando a História foi um projeto de TCC feito pela Etec de Francisco Morato onde o intuito era construir uma plataforma de ensino focado em história e facilitando o estudo de vestibulandos.',
   repository: 'https://github.com/Filipebarrosg/Renderizando-a-Hist-ria',
   tecnology: ['HTML', 'CSS', 'JAVASCRIPT'],
   images: {
@@ -116,22 +117,21 @@ export const clickCard = () => {
 
       const infoProject = `
         <div class="infoProject">
-          <img id='close' src="./Assets/IMG/Projects/close.png" alt="Close">
-          <h1 id="infoTitle">${$elementInfo.name}</h1>
-          <p id="description">
-           ${$elementInfo.description}
-          </p>
-          <div class="techsInfo">
-            ${techId($elementInfo)}
-          </div>
-          <hr id="hrProjects">
+          <div id="leftInfo">
+            <img id='close' src="./Assets/IMG/Projects/close.png" alt="Close">
+            <h1 id="infoTitle">${$elementInfo.name}</h1>
+            <p id="description">${$elementInfo.description}</p>
+            <div class="techsInfo">
+              ${techId($elementInfo)}
+            </div>
+          </div
+          <hr id="hrProjects"/>
           <div id="c-carrousel">
             <img id="screenDesktop" src="${
               $elementInfo.images.Desktop
             }" alt="Desktop">
             <div>
               ${mobileId($elementInfo)}
-
             </div>
           </div>
           <a href="${
