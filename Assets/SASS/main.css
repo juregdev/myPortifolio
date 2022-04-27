@@ -330,6 +330,7 @@ body {
   .infoProject #close {
     width: 10vw;
     right: 1rem;
+    top: 6rem;
   }
 }
 
@@ -501,6 +502,7 @@ body {
 
 @media (max-width: 600px) {
   .infoProject #linkRepo {
+    top: 15%;
     right: 1rem;
   }
 }

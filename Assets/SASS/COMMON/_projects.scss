@@ -74,6 +74,7 @@
     @include media ($mobileXl) {
       width: 10vw;
       right: 1rem;
+      top: 6rem;
     }
   }
 
@@ -176,7 +177,7 @@
     top: 10%;
 
     @include media ($mobileXl) {
-
+      top: 15%;
       right: 1rem;
     }
 
@@ -185,6 +186,7 @@
 
       @include media ($mobileXl) {
         width: 10vw;
+
       }
     }
 
