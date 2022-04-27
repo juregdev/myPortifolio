@@ -326,10 +326,16 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 1000px) {
+  .infoProject #close {
+    width: 6vw;
+    right: 1rem;
+  }
+}
+
 @media (max-width: 600px) {
   .infoProject #close {
     width: 10vw;
-    right: 1rem;
     top: 6rem;
   }
 }
@@ -354,12 +360,18 @@ body {
   width: 33%;
 }
 
+@media (max-width: 1000px) {
+  .infoProject #leftInfo {
+    width: 40%;
+  }
+}
+
 @media (max-width: 600px) {
   .infoProject #leftInfo {
     border: none;
     width: 95%;
     height: auto;
-    margin-top: 20%;
+    margin-top: 10%;
   }
 }
 
@@ -407,6 +419,7 @@ body {
 @media (max-width: 600px) {
   .infoProject #leftInfo .techsInfo {
     margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -414,9 +427,15 @@ body {
   width: 2.5vw;
 }
 
+@media (max-width: 1000px) {
+  .infoProject #leftInfo .techsInfo img {
+    width: 5vw;
+  }
+}
+
 @media (max-width: 600px) {
   .infoProject #leftInfo .techsInfo img {
-    width: 12vw;
+    width: 8vw;
   }
 }
 
@@ -439,6 +458,18 @@ body {
   height: 100%;
 }
 
+@media (max-width: 1000px) {
+  .infoProject #c-carrousel {
+    width: 60%;
+  }
+}
+
+@media (max-width: 600px) {
+  .infoProject #c-carrousel {
+    width: 100%;
+  }
+}
+
 .infoProject #c-carrousel #screenDesktop {
   position: relative;
   top: 2rem;
@@ -452,6 +483,13 @@ body {
     display: block;
     width: 95%;
     top: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .infoProject #c-carrousel #screenDesktop {
+    height: auto;
+    width: 80%;
   }
 }
 
@@ -486,6 +524,13 @@ body {
   height: 70%;
 }
 
+@media (max-width: 1000px) {
+  .infoProject #c-carrousel div .screenMobile {
+    height: auto;
+    width: 30%;
+  }
+}
+
 @media (max-width: 600px) {
   .infoProject #c-carrousel div .screenMobile {
     height: auto;
@@ -500,15 +545,26 @@ body {
   top: 10%;
 }
 
+@media (max-width: 1000px) {
+  .infoProject #linkRepo {
+    right: 1rem;
+  }
+}
+
 @media (max-width: 600px) {
   .infoProject #linkRepo {
-    top: 10rem;
-    right: 1rem;
+    top: 12rem;
   }
 }
 
 .infoProject #linkRepo img {
   width: 3vw;
+}
+
+@media (max-width: 1000px) {
+  .infoProject #linkRepo img {
+    width: 6vw;
+  }
 }
 
 @media (max-width: 600px) {
