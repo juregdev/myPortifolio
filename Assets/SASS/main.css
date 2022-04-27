@@ -10,10 +10,6 @@ body {
   background-color: #FFF;
 }
 
-#imgFirst {
-  display: none;
-}
-
 @-webkit-keyframes slide-in-left {
   0% {
     -webkit-transform: translateX(-1000px);
