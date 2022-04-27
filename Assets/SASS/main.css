@@ -502,7 +502,7 @@ body {
 
 @media (max-width: 600px) {
   .infoProject #linkRepo {
-    top: 15%;
+    top: 10rem;
     right: 1rem;
   }
 }
